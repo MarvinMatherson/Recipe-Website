@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="./node_modules/@glidejs/glide/dist/css/glide.core.min.css" rel="stylesheet">
+    <link href="./node_modules/@glidejs/glide/dist/css/glide.theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>StudentEats</title>
+  </head>
+  <body>
+    <header>
+      <div class="page-header-top container">
+        <a href="index.html"><img src="./images/logo.jpg" alt="StudentEat" /></a>
+      </div>
+    <nav class="navbar navbar-expand-lg mb-4">
+      <div class="container">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a class="nav-link" href="./index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./categories.html">Categories</a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" href="./Login.html">Login</a>
+  </li>
+</ul>
+<form action="search.html" method="get" class="form-inline my-2 my-lg-0">
+
+<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+<button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+
+</form>
+</div>
+</div>
+</nav>
+</header>
+<div class="container">
+<div class="glide">
+
+  <div class="glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+      <li class="glide__slide">
+        <div class="recipe-slide-card">
+          <div class='recipe-slide-card-img' style="background-image: url('./images/burger.jpeg');">
+            <h3>Recipe name</h3>
+          </div>
+        </div>
+      </li>
+      <li class="glide__slide">
+        <div class="recipe-slide-card">
+          <div class="recipe-slide-card-img"style="background-image: url('./images/cake.jpeg');">
+            <h3>Recipe name</h3>
+          </div>
+        </div>
+      </li>
+      <li class="glide__slide">
+        <div class="recipe-slide-card">
+          <div class="recipe-slide-card-img"style="background-image: url('./images/curry.jpeg');">
+            <h3>Recipe name</h3>
+          </div>
+        </div>
+      </li>
+      <li class="glide__slide">
+        <div class="recipe-slide-card">
+          <div class="recipe-slide-card-img"style="background-image: url('./images/maccheese.jpeg');">
+            <h3>Recipe name</h3>
+          </div>
+        </div>
+      </li>
+      <li class="glide__slide">
+        <div class="recipe-slide-card">
+          <div class="recipe-slide-card-img"style="background-image: url('./images/pizza.png');">
+            <h3>Recipe name</h3>
+          </div>
+        </div>
+      </li>
+      <li class="glide__slide">
+        <div class="recipe-slide-card">
+          <div class="recipe-slide-card-img"style="background-image: url('./images/salad.jpeg');">
+            <h3>Recipe name</h3>
+          </div>
+        </div>
+      </li>
+      <li class="glide__slide">
+        <div class="recipe-slide-card">
+          <div class="recipe-slide-card-img"style="background-image: url('./images/shepards.jpeg');">
+            <h3>Recipe name</h3>
+          </div>
+        </div>
+      </li>
+      <li class="glide__slide">
+        <div class="recipe-slide-card">
+          <div class="recipe-slide-card-img"style="background-image: url('./images/tunapasta.jpeg');">
+            <h3>Recipe name</h3>
+          </div>
+        </div>
+      </li>
+  </ul>
+  
+  <div class="glide__arrows" data-glide-el="controls">
+      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+      <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+  </div>
+
+  </div>
+  
+  </div>
+</div>
+<div class="container">
+<h1 class=”mb-4”>Welcome to StudentEat</h1>
+
+<div class="row">
+
+  <div class="col-lg-9">
+  <p>Hello and welcome to studentEats. Here  you can find recipes to the most famous meals!</p>
+  <p>There isn't any website quite like this one! No other student has made a website that looks exactly like this one at all! The most unique website on this site!</p>
+  <a href="categories.html" class="btn btn-studenteat">Browse recipes</a>
+  </div>
+  
+  <div class="col-lg-3">
+  
+    <img src="./images/plate.png" alt="Plate of food"/>
+  </div>
+  
+  </div>
+  
+
+
+</div>
+
+<footer class="container mt-4 text-center">
+
+  <p>&copy;StudentEat - Created for educational purposes</p>
+  
+  </footer>
+<script src="./node_modules/jquery/dist/jquery.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="./node_modules/@glidejs/glide/dist/glide.min.js"></script>
+<script>
+
+  new Glide('.glide', {
+
+type: 'carousel',
+perView: 4
+
+}).mount()
+  
+  </script>
+  </body>
+</html>

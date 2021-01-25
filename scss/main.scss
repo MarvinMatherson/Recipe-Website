@@ -1,0 +1,44 @@
+@import "vendors/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "base/typography";
+@import "theme/theme";
+@import "component/buttons";
+@import "abstracts/variables";
+@import "layout/header";
+@import "theme/navigation";
+
+
+.recipe-slide-card .recipe-slide-card-img {
+
+    height: 200px;
+    
+    background-repeat: no-repeat;
+    
+    background-position: center center;
+    
+    -webkit-background-size: cover;
+    
+    -moz-background-size: cover;
+    
+    -o-background-size: cover;
+    
+    background-size: cover;
+    
+    }
+
+    .recipe-slide-card {
+        border-radius: 3px;
+        margin: 10px;
+        background-color: #FFF;
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
+        padding: 12px;
+        text-align: center;
+        border: solid 1px #eaeaea;
+        }
+
+    .recipe-slide-card h3 {
+        font-size: 1.1rem;
+        padding-top: 10px;
+        color: white;
+
+            }
