@@ -6,24 +6,25 @@
 @import "abstracts/variables";
 @import "layout/header";
 @import "theme/navigation";
-
+@import "vendors/carousel/carousel";
+@import "vendors/carousel/theme";
 
 .recipe-slide-card .recipe-slide-card-img {
 
     height: 200px;
-    
+
     background-repeat: no-repeat;
-    
+
     background-position: center center;
-    
+
     -webkit-background-size: cover;
-    
+
     -moz-background-size: cover;
-    
+
     -o-background-size: cover;
-    
+
     background-size: cover;
-    
+
     }
 
     .recipe-slide-card {
