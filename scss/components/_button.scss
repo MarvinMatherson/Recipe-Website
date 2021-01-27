@@ -1,13 +1,10 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
+// This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.btn.btn-studenteat {
 
-footer {
-
-    p {
+    background-color: $secondary-color;
     
-    font-size: 0.9rem;
-    
-    }
+    color: $primary-color;
     
     }

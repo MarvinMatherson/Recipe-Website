@@ -1,0 +1,61 @@
+body#page-recipe {
+
+    .recipe-image {
+
+        border: solid 3px #FFF;
+        
+        height: 150px;
+        
+        background-repeat: no-repeat;
+        
+        background-position: center center;
+        
+        -webkit-background-size: cover;
+        
+        -moz-background-size: cover;
+        
+        -o-background-size: cover;
+        
+        background-size: cover;
+        
+        
+        a {
+        
+        display: block;
+        
+        height: 150px;
+        
+        }
+        
+        }
+
+        .recipe-features {
+
+            list-style: none;
+            
+            padding: 0;
+            
+            color: #FFF;
+            
+            
+            li {
+            
+            margin-bottom: 10px;
+            
+            i {
+            
+            text-align: center;
+            
+            width: 27px;
+            
+            }
+            
+            }
+            
+            }
+            
+
+
+
+
+}

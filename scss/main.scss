@@ -1,45 +1,66 @@
-@import "vendors/bootstrap";
+@import '../node_modules/@glidejs/glide/dist/css/glide.core.min.css';
+@import '../node_modules/@glidejs/glide/dist/css/glide.theme.min.css';
+@import "../node_modules/lightbox2/dist/css/lightbox.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import "base/typography";
-@import "theme/theme";
-@import "component/buttons";
-@import "abstracts/variables";
-@import "layout/header";
-@import "theme/navigation";
-@import "vendors/carousel/carousel";
-@import "vendors/carousel/theme";
 
-.recipe-slide-card .recipe-slide-card-img {
 
-    height: 200px;
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
 
-    background-repeat: no-repeat;
+// 2. Vendors
+@import 'vendors/bootstrap';
 
-    background-position: center center;
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
 
-    -webkit-background-size: cover;
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
 
-    -moz-background-size: cover;
+// 5. Components
+@import
+  'components/button',
+  'components/recipecard';
 
-    -o-background-size: cover;
+// 6. Page-specific styles
+@import
+  'pages/home',
+  'pages/login',
+  'pages/recipe';
 
-    background-size: cover;
+// 7. Themes
+@import
+  'themes/default';
 
+
+.recipe-slide-card {
+    border-radius: 3px;
+    margin: 10px;
+    background-color: #FFF;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
+    padding: 12px;
+    text-align: center;
+    border: solid 1px #eaeaea;
+h3 {
+    font-size: 1.1rem;
+    padding-top: 10px;
     }
-
-    .recipe-slide-card {
-        border-radius: 3px;
-        margin: 10px;
-        background-color: #FFF;
-        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
-        padding: 12px;
-        text-align: center;
-        border: solid 1px #eaeaea;
-        }
-
-    .recipe-slide-card h3 {
-        font-size: 1.1rem;
-        padding-top: 10px;
-        color: white;
-
-            }
+.recipe-slide-card-img {
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    }
+    
+}

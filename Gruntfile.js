@@ -22,10 +22,91 @@ module.exports = function(grunt){
                spawn: false,
            },
        },
-    },
+       js: {
+
+        files: ['./scripts/**/*.js'],
+        
+        tasks: ['uglify:main'],
+        
+        options: {
+        
+        spawn: false,
+        
+        },
+        
+        },
+     },
+     uglify:{
+        main: {
+            options: {
+            sourceMap: false, 
+            compress: true,
+            mangle: false,
+            },
+            files: {
+                "./js/scripts.min.js": ["./scripts/**/*.js"],
+            },
+        },
+        vendor: {
+
+            options: {
+            
+            sourceMap: false,
+            
+            compress: true,
+            
+            mangle: false,
+            
+            },
+            
+            files: {
+            
+            "./js/scripts-vendor.min.js": [
+            
+            "./node_modules/jquery/dist/jquery.min.js",
+            
+            "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+
+           "./node_modules/@glidejs/glide/dist/glide.min.js",
+
+           "./node_modules/lightbox2/dist/js/lightbox.min.js",
+
+            
+            ],
+            
+            },
+            
+            },
+            
+       },
+     concurrent: {
+
+        options: {
+        
+        logConcurrentOutput: true,
+        
+        limit: 10,
+        
+        },
+        
+        watchall: {
+        
+        tasks: ["watch:scss", "watch:js"],
+        
+        },
+        
+        },
+    
+        
+
+
     });
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('default',['watch:scss']);
+    grunt.loadNpmTasks("grunt-concurrent");
+    grunt.loadNpmTasks("grunt-contrib-uglify")
+    grunt.registerTask('default',['concurrent:watchall']);
+    grunt.registerTask("vendors", ["uglify:vendor"]);
+    
   };
   
