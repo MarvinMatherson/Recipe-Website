@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="UTF-8">
-<title>Page Title</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="./css/styles.css">
-<link href="./node_modules/@glidejs/glide/dist/css/glide.core.min.css" rel="stylesheet">
-<link href="./node_modules/@glidejs/glide/dist/css/glide.theme.min.css" rel="stylesheet">
-<script src="https://kit.fontawesome.com/ce87640ca1.js" crossorigin="anonymous"></script>
-<body id="page-home">
-<header>
-    <div class="page-header-top text-center text-md-left container">  
-        <a href="index.html"><img src="./recipe-images/logo.jpg" alt="StudentEat" /></a>
+{extends file="layouts/main.tpl"}
+{block name="body"}
+
+
+<a href="index.php"><img src="./recipe-images/logo.jpg" alt="StudentEat" /></a>
     </div>
 <nav class="navbar navbar-expand-lg">
     <div class="container">
@@ -20,14 +12,35 @@
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="categories.html">Catogories</a>
+                <a class="nav-link" href="index.php?p=categories">Catogories</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
-                </li>
+            {if $user_data}
+
+<li class="nav-item">
+
+<a class="nav-link" href="index.php?p=account">Account</a>
+
+</li>
+
+
+<li class="nav-item">
+
+<a class="nav-link" href="index.php?p=logout">Logout</a>
+
+</li>
+
+{else}
+
+<li class="nav-item">
+
+<a class="nav-link" href="index.php?p=login">Login / Register</a>
+
+</li>
+
+{/if}
             </ul>
             <form action="search.html" method="get" class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -36,6 +49,8 @@
         </div>
     </div>
 </nav>
+</header>
+<div>
 </header>
 <div class="container">
 <div class="glide">
@@ -100,7 +115,7 @@
     <div class="col-lg-9">
         <p>Hello welcome to StudentEat. This si a website made by students for students.</p>
         <p>This website will showcase many different recipes that you can learn to cook on your own at home!! You can use these recipes at home and show off to your friends!</p>
-        <a href="categories.html" class="btn btn-studenteat">Browse recipes</a>
+        <a href="index.php?p=categories" class="btn btn-studenteat">Browse recipes</a>
 
     </div>
     <div class="col-lg-3">
@@ -124,4 +139,4 @@
 </body>
 
 </html>
-  
+{/block}

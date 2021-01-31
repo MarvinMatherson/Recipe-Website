@@ -28,13 +28,15 @@
 // 5. Components
 @import
   'components/button',
-  'components/recipecard';
+  'components/recipecard',
+  'components/forms';
 
 // 6. Page-specific styles
 @import
   'pages/home',
   'pages/login',
   'pages/recipe';
+
 
 // 7. Themes
 @import

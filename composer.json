@@ -1,0 +1,6 @@
+{
+    "require": {
+        "smarty/smarty": "^3.1",
+        "sendgrid/sendgrid": "^7.9"
+    }
+}
